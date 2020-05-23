@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "911806210419",
+    "firebase_url": "https://planets-228c5.firebaseio.com",
+    "project_id": "planets-228c5",
+    "storage_bucket": "planets-228c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:911806210419:android:8551ce458c85d4acb06506",
+        "android_client_info": {
+          "package_name": "aranda.hector.planets_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "911806210419-g6c0kh5uv2rbh64956ku0qro2gl43fmf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnvT9kBgt3n0ZcA_ApjEM2iOZ8Fm3h9QM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "911806210419-g6c0kh5uv2rbh64956ku0qro2gl43fmf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
