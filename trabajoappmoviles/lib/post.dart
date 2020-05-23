@@ -1,3 +1,5 @@
+//Este metodo sirve para catalogar globalmente las clases de los post y de los comentarios
+//para poder generar y agarrar la informacion de cada post y comentario para poder mostrarlos en la app
 class Post {
   int userId;
   int id;

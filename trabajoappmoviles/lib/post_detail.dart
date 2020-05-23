@@ -16,7 +16,7 @@ class Comments extends StatefulWidget {
 class _CommentsState extends State<Comments> {
   Data data = new Data();
   List<Comment> _comments = List<Comment>();
-
+//manda a llamar toda la lista de los comentarios generada para ser mostrada
   @override
   void initState() {
     // TODO: implement initState
@@ -25,7 +25,7 @@ class _CommentsState extends State<Comments> {
       _comments.addAll(value);
     }));
   }
-
+//el metodo de arriba funciona para tomar todos los comentarios almacenados en data_file y mostrarlos en este apartado
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,10 +33,10 @@ class _CommentsState extends State<Comments> {
           title: Text("Comentario",style: GoogleFonts.bangers(fontSize: 25),textAlign: TextAlign.center,),
           backgroundColor: Colors.purple,
         ),
-        body: SingleChildScrollView(
+        body: SingleChildScrollView( // etste funciona para escrollear en la app
           child: Column(
             children: <Widget>[
-              Card(
+              Card( //aqui agregamos un card para mostrar los comentarios
                 margin: EdgeInsets.all(5),
                 color: Colors.white,
                 child: Column(
@@ -141,3 +141,4 @@ class _CommentsState extends State<Comments> {
         ));
   }
 }
+//en los apartados de arriba solo agregamos detalles para que el apartado sea mas visible y funciones de mejor manera

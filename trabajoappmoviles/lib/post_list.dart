@@ -16,14 +16,14 @@ class PostList extends StatefulWidget {
 class _PostListState extends State<PostList> {
   Data data= new Data();
   List<Post>_post = List<Post>();
-
+//aqui manda a llamar la lista de los post para que pueda ser mostrada
 void initState(){
   data.getPost().then((value)=> setState((){
     _post.addAll(value);}));
   super.initState();
 
-
 }
+//el metodo de arriba toma la informacion del archivo data_file para poderlo mostrar en la app
 
 
 
@@ -37,9 +37,9 @@ void initState(){
 
       body: _post == null
           ? Center(
-        child: CircularProgressIndicator(),
+        child: CircularProgressIndicator(),//Si es que marca null que marque una ruedita girando hasta que cargue la app
       )
-          : ListView.builder(
+          : ListView.builder( //lsitar todo el contenido
         itemCount: _post.length,
         itemBuilder: (BuildContext context, int index) {
           return new Container(
@@ -50,12 +50,12 @@ void initState(){
                   new Card(
                     child: new ListTile(
 
-                      title:new Text(_post[index].title,style: GoogleFonts.poppins(fontSize:18),textAlign: TextAlign.left,),
+                      title:new Text(_post[index].title,style: GoogleFonts.poppins(fontSize:18),textAlign: TextAlign.left,),//mandar a llamar el titulo del post
 
-                      subtitle: new Text("\n${_post[index].body}",style: GoogleFonts.dancingScript(fontSize:14),textAlign: TextAlign.left,),
+                      subtitle: new Text("\n${_post[index].body}",style: GoogleFonts.dancingScript(fontSize:14),textAlign: TextAlign.left,), //manda a llamar el cuerpo del post
                       leading: Image.network('https://i1.wp.com/criterionoticias.com/wp-content/uploads/2020/01/78769083-sello-postal-y-bandera-del-grunge-de-m%C3%A9xico-en-el-fondo-blanco.jpg?fit=1300%2C780&ssl=1'),
                       contentPadding: const EdgeInsets.all(10.0),
-                      onTap: (){Navigator.of(context).push(MaterialPageRoute(builder: (context) => Comments(post: _post[index],)));
+                      onTap: (){Navigator.of(context).push(MaterialPageRoute(builder: (context) => Comments(post: _post[index],)));// este sirve para cuando se pulse se mande a los comntarios
                       },
                     ),
                     elevation: 2.1,
